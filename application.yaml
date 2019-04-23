@@ -1,0 +1,23 @@
+server:
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  http:
+    multipart:  #配置上传下载文件的大小限制
+      maxRequestSize: 209715200
+      maxFileSize: 209715200
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/zuoye
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  type-aliases-package: com.baizhi.entity
+
+
